@@ -1,0 +1,199 @@
+# =============================================================================
+#  .gitignore - Sistema de Pastelería "Carmen" (WinForms · .NET Framework 4.8)
+#  Solución: AppPasteleria/Sis457Pasteleria.sln  (CAD · CLN · CP)
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# 1. Resultado de compilación (se regenera siempre; nunca debe versionarse)
+# -----------------------------------------------------------------------------
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Ll]og/
+[Ll]ogs/
+*.exe
+*.dll
+*.pdb
+*.cache
+*.Up2Date
+*.log
+*.vspscc
+*.vssscc
+*.ilk
+*.meta
+*.obj
+*.iobj
+*.ipdb
+*.pch
+*.pgc
+*.pgd
+*.rsp
+*.sbr
+*.tlb
+*.tli
+*.tlh
+*.tmp
+*.tmp_proj
+*.build.csdef
+# Si algún binario propio DEBE versionarse, use una excepción explícita: !ruta/archivo.dll
+
+# -----------------------------------------------------------------------------
+# 2. Paquetes NuGet (packages.config -> se restauran al compilar en Visual Studio)
+#    El repositorio original traía packages/EntityFramework.6.5.1 (~30 MB).
+# -----------------------------------------------------------------------------
+**/[Pp]ackages/*
+!**/[Pp]ackages/build/
+!**/[Pp]ackages/repositories.config
+*.nupkg
+*.snupkg
+*.nuget.props
+*.nuget.targets
+project.lock.json
+project.fragment.lock.json
+artifacts/
+.nuget/
+!.nuget/NuGet.config
+
+# -----------------------------------------------------------------------------
+# 3. Archivos de usuario / IDE
+# -----------------------------------------------------------------------------
+.vs/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.userprefs
+*.rsuser
+*.DotSettings.user
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.sln.iml
+.history/
+*.swp
+*~
+~$*
+$tf/
+.cr/
+_Chutzpah*
+_TeamCity*
+*.dotCover
+*.coverage
+*.coveragexml
+TestResults/
+[Tt]est[Rr]esult*/
+BenchmarkDotNet.Artifacts/
+*.VisualState.xml
+ipch/
+*.psess
+*.vsp
+*.vspx
+*.sap
+
+# -----------------------------------------------------------------------------
+# 4. Entity Framework 6 (Database First / EDMX)
+#    Se versionan Modelo.edmx, Modelo.edmx.diagram y las plantillas .tt.
+#    Se ignoran los recursos temporales que EF genera al compilar y las bases locales.
+# -----------------------------------------------------------------------------
+edmxResourcesToEmbed/
+*.csdl
+*.ssdl
+*.msl
+*.mdf
+*.ldf
+*.ndf
+*.bak
+*.bacpac
+*.dacpac
+
+# -----------------------------------------------------------------------------
+# 5. Secretos y configuración local (NUNCA subir credenciales reales)
+#    App.config lleva una cadena de conexión de DESARROLLO (usuario de laboratorio).
+#    Para usar credenciales propias: copie a App.local.config o use
+#      git update-index --skip-worktree AppPasteleria/CpPasteleria/App.config
+# -----------------------------------------------------------------------------
+*.local.config
+*.local.json
+*.secrets.json
+secrets.json
+.env
+.env.*
+!.env.example
+*.pfx
+*.p12
+*.snk
+*.key
+*.pem
+*.publishsettings
+PublishScripts/
+*.pubxml
+*.pubxml.user
+*.azurePubxml
+
+# -----------------------------------------------------------------------------
+# 6. ClickOnce / MSIX / instaladores
+# -----------------------------------------------------------------------------
+publish/
+*.application
+*.deploy
+*.appx
+*.appxbundle
+*.msix
+*.msixbundle
+*.msi
+*.msm
+*.msp
+AppPackages/
+BundleArtifacts/
+Generated\ Files/
+
+# -----------------------------------------------------------------------------
+# 7. Licencias de componentes comerciales
+#    (el proyecto ya no depende de ComponentOne; se deja por si se reintroduce)
+# -----------------------------------------------------------------------------
+licenses.licx
+*.lic
+
+# -----------------------------------------------------------------------------
+# 8. Sistema operativo
+# -----------------------------------------------------------------------------
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# -----------------------------------------------------------------------------
+# 9. Copias / archivos comprimidos accidentales
+# -----------------------------------------------------------------------------
+*.orig
+*.rej
+*.zip
+*.7z
+*.rar
+*.tar
+*.tar.gz
+
+# -----------------------------------------------------------------------------
+# 10. Exportaciones generadas por la aplicación (reportes CSV de ventas, etc.)
+# -----------------------------------------------------------------------------
+Exportaciones/
+exports/
+*.export.csv
